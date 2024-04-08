@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease-out;
+    box-sizing: border-box;
+    font-family: 'Inter', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #22223b;
+    color: #c9ada7;
+}
+
+.button {
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
+
+.button:hover {
+    background-color: #22223b;
+    color:#c9ada7;
+    cursor: pointer;
+}
+
+#calcu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 10px;
+    background-color: #4a4e69;
+    box-shadow: 7px 7px 15px #18182a;
+}
+
+#app h1 {
+    padding: 30px;
+    color: #f2e9e4;
+}
+
+input {
+    width: 120px;
+    height: 40px;
+}
+
+.result {
+    background-color: #f2e9e4;
+    color:#22223b;
+    height: 38px;
+    width: 380px;
+    margin: 5px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    line-height: 38px;
+}

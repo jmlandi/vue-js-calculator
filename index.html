@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <!-- Import Map -->
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "./vue.js"
+            }
+        }
+    </script>
+    
+    <div id="app">
+        <h1>🧮 Calculadora Web</h1>
+        <table id="calcu"> 
+            <tr> 
+                <td colspan="3"> 
+                    <div class="result" type="text" id="result"> {{ display }} </div> 
+                </td> 
+                <td><input class="button" type="button" value="c" @click="handlerButton('c')"></td> 
+            </tr> 
+      
+            <tr> 
+                <td><input class="button" type="button" value="1" @click="handlerNumber('1')"></td> 
+                <td><input class="button" type="button" value="2" @click="handlerNumber('2')"></td> 
+                <td><input class="button" type="button" value="3" @click="handlerNumber('3')"></td> 
+                <td><input class="button" type="button" value="/" @click="handlerButton('/')"></td> 
+            </tr> 
+            <tr> 
+                <td><input class="button" type="button" value="4" @click="handlerNumber('4')"></td> 
+                <td><input class="button" type="button" value="5" @click="handlerNumber('5')"></td> 
+                <td><input class="button" type="button" value="6" @click="handlerNumber('6')"></td> 
+                <td><input class="button" type="button" value="*" @click="handlerButton('*')"></td> 
+            </tr> 
+            <tr> 
+                <td><input class="button" type="button" value="7" @click="handlerNumber('7')"></td> 
+                <td><input class="button" type="button" value="8" @click="handlerNumber('8')"></td> 
+                <td><input class="button" type="button" value="9" @click="handlerNumber('9')"></td> 
+                <td><input class="button" type="button" value="-" @click="handlerButton('-')"></td> 
+            </tr> 
+            <tr> 
+                <td><input class="button" type="button" value="0" @click="handlerNumber('0')"></td> 
+                <td><input class="button" type="button" value="." @click="handlerNumber(',')"></td> 
+                <td><input class="button" type="button" value="=" @click="handlerButton('=')"></td> 
+                <td><input class="button" type="button" value="+" @click="handlerButton('+')"></td> 
+            </tr> 
+        </table> 
+    </div>
+
+    <!-- MyApp -->
+    <script type="module">
+        import { createApp } from 'vue'
+        import myComponent from './script.js'
+        createApp(myComponent).mount('#app')
+    </script>
+</body>
+</html>
